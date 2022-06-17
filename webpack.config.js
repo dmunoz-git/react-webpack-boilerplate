@@ -6,38 +6,13 @@ const isProduction = process.env.NODE_ENV == "production";
 
 const config = {
   entry: "./src/app/index.js",
-  stats: 'minimal',
+
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].[contenthash].js",
-    clean: true
+    clean: true,
   },
-  devServer: {
-    open: false,
-    port: 3000,
-    hot: true,
-    host: "localhost",
-  },
-  optimization: {
-    moduleIds: 'deterministic',
-    runtimeChunk: 'single',
-    splitChunks: {
-      chunks: "all",
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-      },
-    },
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "public/index.html",
-    }),
-    new MiniCssExtractPlugin(),
-  ],
+
   module: {
     rules: [
       {
@@ -56,16 +31,42 @@ const config = {
     ],
   },
 
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "public/index.html",
+    }),
+    new MiniCssExtractPlugin(),
+  ],
+
   resolve: {
-    extensions: [".js", ".jsx", ".scss"], //Automatically resolve these extensions when importing
+    extensions: [".js", ".jsx"], //Automatically resolve these extensions when importing
+  },
+
+  devServer: {
+    open: false,
+    port: 3000,
+    hot: true,
+    host: "localhost",
+  },
+
+  mode: isProduction ? "production" : "development",
+
+  stats: "minimal",
+
+  optimization: {
+    moduleIds: "deterministic",
+    runtimeChunk: "single",
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all",
+        },
+      },
+    },
   },
 };
 
-module.exports = () => {
-  if (isProduction) {
-    config.mode = "production";
-  } else {
-    config.mode = "development";
-  }
-  return config;
-};
+module.exports = config;
