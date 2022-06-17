@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "corejs": 3.22,
+        "useBuiltIns": "usage"
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic" // Not necesary to import React in the code
+      }
+    ]
+  ]
+}
