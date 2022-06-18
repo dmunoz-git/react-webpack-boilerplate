@@ -30,6 +30,9 @@ module.exports = {
 
   resolve: {
     extensions: [".js", ".jsx"], //Automatically resolve these extensions when importing
+    alias: {
+      "@assets": path.resolve(__dirname, "src/assets"),
+    }
   },
 
   plugins: [
