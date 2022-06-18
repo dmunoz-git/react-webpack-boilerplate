@@ -6,7 +6,7 @@ module.exports = {
   stats: "minimal",
 
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "../build"),
     clean: true,
   },
 
