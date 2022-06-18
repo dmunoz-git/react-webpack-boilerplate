@@ -10,7 +10,7 @@
     "test:e2e": "cypress open",
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development",
-    "serve": "webpack serve"
+    "serve": "webpack serve --mode=development"
   },
   "keywords": [],
   "author": "Godm0de",
@@ -33,7 +33,6 @@
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "cypress": "^10.1.0",
-    "electron": "^19.0.1",
     "html-webpack-plugin": "^5.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^28.1.1",
