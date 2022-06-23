@@ -1,12 +1,12 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  entry: "./src/index.js",
-  stats: "minimal",
+  entry: './src/index.jsx',
+  stats: 'minimal',
 
   output: {
-    path: path.resolve(__dirname, "../build"),
+    path: path.resolve(__dirname, '../build'),
     clean: true,
   },
 
@@ -14,30 +14,30 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        type: 'asset',
       },
     ],
   },
 
   resolve: {
-    extensions: [".js", ".jsx"], //Automatically resolve these extensions when importing
+    extensions: ['.js', '.jsx'], //Automatically resolve these extensions when importing
     alias: {
-      "@assets": path.resolve(__dirname, "src/assets"),
-    }
+      '@public': path.resolve(__dirname, '../public'),
+    },
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "public/index.html",
+      template: 'public/index.html',
     }),
   ],
 };
