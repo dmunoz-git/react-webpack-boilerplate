@@ -29,7 +29,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'], //Automatically resolve these extensions when importing
+    extensions: ['.js', '.jsx'], // Automatically resolve these extensions when importing
     alias: {
       '@public': path.resolve(__dirname, '../public'),
     },

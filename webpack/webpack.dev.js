@@ -1,14 +1,14 @@
 module.exports = {
-  mode: "development",
-  
+  mode: 'development',
+
   output: {
-    filename: "[name].js",
+    filename: '[name].js',
   },
 
   devServer: {
     open: false,
     port: 3000,
     hot: true,
-    host: "localhost",
+    host: 'localhost',
   },
 };

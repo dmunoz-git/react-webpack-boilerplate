@@ -1,22 +1,22 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: "production",
-  
+  mode: 'production',
+
   output: {
-    filename: "[name].[contenthash].js",
+    filename: '[name].[contenthash].js',
   },
 
   optimization: {
-    moduleIds: "deterministic",
-    runtimeChunk: "single",
+    moduleIds: 'deterministic',
+    runtimeChunk: 'single',
     splitChunks: {
-      chunks: "all",
+      chunks: 'all',
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: "vendors",
-          chunks: "all",
+          name: 'vendors',
+          chunks: 'all',
         },
       },
     },

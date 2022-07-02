@@ -1,9 +1,8 @@
-const { merge } = require("webpack-merge");
-const baseConfig = require("./webpack/webpack.base.js");
+const { merge } = require('webpack-merge');
+const baseConfig = require('./webpack/webpack.base');
 
 module.exports = (env, argv) => {
-
-  const enviroment = argv.mode === "production" ? "prod" : "dev";
+  const enviroment = argv.mode === 'production' ? 'prod' : 'dev';
 
   const config = require(`./webpack/webpack.${enviroment}.js`);
 

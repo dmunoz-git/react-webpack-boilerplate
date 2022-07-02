@@ -11,7 +11,8 @@
     "test:coverage": "jest --coverage",
     "e2e": "cypress open",
     "lint": "eslint 'src/**/*.js?(x)'",
-    "lint:fix": "eslint  'src/**/*.js?(x)' --fix"
+    "lint:fix": "eslint  'src/**/*.js?(x)' --fix",
+    "lint:fix:all": "eslint * --fix"
   },
   "keywords": [],
   "author": "Godm0de",
@@ -55,6 +56,7 @@
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^14.9.1",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0",

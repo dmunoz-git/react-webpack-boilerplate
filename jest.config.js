@@ -1,4 +1,4 @@
-const config = {
+module.exports = {
   verbose: true,
   testEnvironment: 'jsdom',
   transform: {
@@ -14,5 +14,3 @@ const config = {
   },
   testPathIgnorePatterns: ['<rootDir>/cypress/'],
 };
-
-module.exports = config;
