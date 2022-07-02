@@ -25,6 +25,12 @@
   ],
   "settings": {
     "import/resolver": {
+      "alias": {
+        "map": [
+          ["@public", "./public"]
+        ],
+        "extensions": [".js", ".jsx"]
+      },
       "node": {
         "extensions": [
           ".js",
@@ -69,6 +75,7 @@
         "amd": true,
         "caseSensitive": true
       }
-    ]
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }
