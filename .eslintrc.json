@@ -49,6 +49,12 @@
       ".jsx"
     ]
   },
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/build/**",
+    "**/coverage/**",
+    "**/public/**"
+  ],
   "rules": {
     "react/jsx-filename-extension": [
       1,
